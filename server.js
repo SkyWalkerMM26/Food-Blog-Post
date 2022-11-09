@@ -29,12 +29,16 @@ const sess = {
 
 app.use(session(sess));
 
+//It parses incoming JSON requests and puts the parsed data in req.body.
 app.use(express.json());
+//It parses incoming JSON requests that comes from a form and puts the parsed data in req.body.
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+
+//synchronize your Sequelize model with your database tables.
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
