@@ -8,11 +8,6 @@ const userData = [
         password: 'password123'
     },
     {
-        username: 'alexisz',
-        email: 'alexisz@mail.com',
-        password: 'password123'
-    },
-    {
         username: 'mouam',
         email: 'mouam@mail.com',
         password: 'password123'
@@ -20,6 +15,11 @@ const userData = [
     {
         username: 'yingl',
         email: 'yingl@mail.com',
+        password: 'password123'
+    },
+    {
+        username: 'alexisz',
+        email: 'alexisz@mail.com',
         password: 'password123'
     },
 ];
