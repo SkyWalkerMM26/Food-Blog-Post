@@ -1,18 +1,20 @@
 body{
-    background-color: #408ab4;
+    /* background-color: #408ab4; */
 }
 
 header{
     position: relative;
     top: 2vh;
+    /* background-color: #408ab4; */
+    
 }
 #start{
     position: relative;
     bottom: 8vh;
-    /* top: 2vh; */
+    top: 2vh;
     background-color: #f3a968;
-    /* background-color: white;
-    color: grey; */
+    /* background-color: white; */
+    color: grey;
     border: none;
 
 }
