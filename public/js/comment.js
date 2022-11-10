@@ -19,6 +19,12 @@ async function commentFormHandler(event) {
                 'content-Type': 'application/json'
             }
         });
-        
+
+        if (response.ok) {
+            document.location.reload();
+        } else {
+            alert(response.statusText);
+        }
+
     }
 }
