@@ -1,5 +1,5 @@
-body{
-    /* background-color: #408ab4; */
+:root {
+    --btn-orange : #f3a968;
 }
 
 header{
@@ -8,13 +8,16 @@ header{
     /* background-color: #408ab4; */
     
 }
+.btn{
+    background-color: var(--btn-orange);
+    color: white;
+}
 #start{
     position: relative;
     bottom: 8vh;
     top: 2vh;
-    background-color: #f3a968;
     /* background-color: white; */
-    color: grey;
+    color: white;
     border: none;
 
 }
