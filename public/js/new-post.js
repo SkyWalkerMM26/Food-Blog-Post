@@ -21,4 +21,4 @@ async function newPostHandler(event) {
     }
 }
 
-document.querySelector('.<no specific class yet>').addEventListener('submit', newPostHandler);
+document.querySelector('.new-post-form').addEventListener('submit', newPostHandler);
