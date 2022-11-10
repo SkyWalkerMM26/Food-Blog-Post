@@ -20,3 +20,5 @@ async function newPostHandler(event) {
         alert (response.statusText);
     }
 }
+
+document.querySelector('.<no specific class yet>').addEventListener('submit', newPostHandler);
