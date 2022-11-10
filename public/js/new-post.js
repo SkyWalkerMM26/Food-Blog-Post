@@ -14,5 +14,9 @@ async function newPostHandler(event) {
         }
     });
 
-    
+    if (response.ok) {
+        document.location.replace('/new-post');
+    } else {
+        alert (response.statusText);
+    }
 }
