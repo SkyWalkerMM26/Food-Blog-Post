@@ -1,0 +1,26 @@
+<section>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h2 class="display-4 text-center text-secondary">{{title}}</h2>
+            <img src="https://via.placeholder.com/400" class="img-fluid rounded mx-auto d-block head-img">
+            <p class="col-8 justify-content-center">{{content_box}}</p>
+            <p class="font-weight-light text-right">Author: {{user.name}}</p>
+            <p class="font-weight-light text-right">Date Created{{date_created}}</p>
+          </div>
+        </div>
+      </section>
+      <div class="card">
+        <div class="card-header">
+          {{content}}
+        </div>
+        <div class="card-body">
+          <p class="font-weight-light">{{user_id.name}}</p>
+        </div>
+      </div>
+      <div class="card">
+        <p class="font-weight-light">Create a new comment:</p>
+        <input class="card-header"></input>
+        <div class="card-body">
+        </div>
+        <button class="btn btn-outline-white my-2 my-sm-0" type="submit">submit comment</button>
+      </div>

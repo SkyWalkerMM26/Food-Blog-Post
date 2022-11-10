@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/images/icon.png" rel="icon" type="image/x-icon"/>
+    <title>Camera Eats First</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand" href="#">
+            <img src="/images/icon.png" width="30" height="30" alt="">
+            <strong>Camera Eats First</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            {{#if logged_in}}
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">New Post</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+            {{else}}
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login/Sign Up</a>
+            </li>
+            {{/if}}
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-white my-2 my-sm-0" type="submit">Search Yelp</button>
+          </form>
+        </div>
+      </nav>
+      <main>
+        {{{body}}}
+      </main>
+      <footer>
+        <small class="form-text text-muted">Thank you for visiting Camera Eats First!</small>
+      </footer>
+      {{#if logged_in}}
+      <script src="/public/js/logout.js"></script>
+      {{/if}}
+</body>
+</html>
