@@ -12,5 +12,15 @@
             <label for="email"> User Email</label>
             <input name="email" value="{{user.email}}"/>
         </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password"/>
+        </div>
+        <div>
+            <input type="hidden" id="user-id" name="user-id" value="{{user.id}}" />
+        </div>
+        <button type="submit">Update</button>
     </form>
 </article>
+
+<script src="/public/js/edit-user.js"></script>
