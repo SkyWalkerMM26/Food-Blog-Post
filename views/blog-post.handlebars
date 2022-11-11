@@ -1,26 +1,28 @@
-<section>
-        <div class="jumbotron jumbotron-fluid">
+ <section>
+        <div>
           <div class="container">
             <h2 class="display-4 text-center text-secondary">{{title}}</h2>
             <img src="https://via.placeholder.com/400" class="img-fluid rounded mx-auto d-block head-img">
-            <p class="col-8 justify-content-center">{{content_box}}</p>
-            <p class="font-weight-light text-right">Author: {{user.name}}</p>
-            <p class="font-weight-light text-right">Date Created{{date_created}}</p>
+              <p class="col-8 text-center lead">{{content_box}}</p>
+            <p class="font-weight-light text-right">Author: {{username}}</p>
+            <p class="font-weight-light text-right">Date Created:</p>
           </div>
         </div>
       </section>
-      <div class="card">
-        <div class="card-header">
+      {{#each comment as |comment|}}
+      <section class="text-center">
+        <div class="card col-md-6 p-3 m-3">
+        <div class="card-body">
           {{content}}
         </div>
-        <div class="card-body">
-          <p class="font-weight-light">{{user_id.name}}</p>
+        <div class="card-header">
+          <p class="font-weight-light">-{{username}}</p>
         </div>
       </div>
-      <div class="card comment-form">
         <p class="font-weight-light">Create a new comment:</p>
         <input class="card-header"></input>
         <div class="card-body">
         </div>
-        <button class="btn btn-outline-white my-2 my-sm-0" type="submit">submit comment</button>
+        <button class="btn btn-sm my-2 col-3 float-right" type="submit">submit comment</button>
       </div>
+    </section>
