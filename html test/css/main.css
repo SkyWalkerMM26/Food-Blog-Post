@@ -13,12 +13,11 @@ header{
     color: white;
     border:none;
 }
+
 #start{
     position: relative;
     bottom: 8vh;
-    top: 2vh;
-    /* background-color: white; */
+    /* top: 2vh; */
     color: white;
     border: none;
-
 }

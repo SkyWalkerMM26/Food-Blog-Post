@@ -1,0 +1,23 @@
+:root {
+    --btn-orange : #f3a968;
+}
+
+header{
+    position: relative;
+    top: 2vh;
+    /* background-color: #408ab4; */
+    
+}
+.btn{
+    background-color: var(--btn-orange);
+    color: white;
+    border:none;
+}
+
+#start{
+    position: relative;
+    bottom: 8vh;
+    /* top: 2vh; */
+    color: white;
+    border: none;
+}

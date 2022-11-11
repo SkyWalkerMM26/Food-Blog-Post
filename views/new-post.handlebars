@@ -1,23 +1,29 @@
       <section class="row justify-content-center my-4">
-        <div class="col-12 col-sm-6 col-md-6">
+        <div class="col-10 col-sm-8 col-md-6">
             <h2 class="text-center text-secondary">Create a New Post</h2>
             <form>
               <div class="form-group mb-2 p-2">
                 <label for="name-input">Post Title:</label>
-                <input type="text" class="form-control" id="name-input" placeholder="Give this post a fun title!" />
+                <input type="text" class="form-control" id="name-input" placeholder="Give this post a fun title!">
+                  {{title-input}}
+                </input>
               </div>
               <div class="form-group mb-2 p-2">
                 <label for="category-input">Food Category:</label>
-                <input type="text" class="form-control" id="category-input" placeholder="What type of food are you posting about?" />
+                <input type="text" class="form-control" id="category-input" placeholder="What type of food are you posting about?">
+                  {{category-input}}
+                </input>
               </div>
               <div class="form-group mb-2 p-2">
                 <label for="comment-input">Your Post Content:</label>
-                <textarea name="comment" id="comment-input" class="form-control"></textarea>
+                <textarea name="comment" id="comment-input" class="form-control">
+                  {{content_box}}
+                </textarea>
               </div>
               
             </form>
           </div>
-        <div class="col-12 col-sm-6 col-md-6 mx-8 p-4 mb-6">
+        <div class="col-10 col-sm-8 col-md-6 mx-8 p-4 mb-6">
           <div>
             <h2 class="text-center text-secondary">Image Upload</h2>
             <div class="custom-file">
@@ -25,7 +31,7 @@
               <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
               <div class="invalid-feedback">Example invalid custom file feedback</div>
             </div>
-            <button class="btn mx-2 my-6">Create Post</button>
+            <button class="btn m-4 p-4">Create Post</button>
           </div>
           
         </div>
