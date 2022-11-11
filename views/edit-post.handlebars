@@ -18,3 +18,17 @@
         <button class="btn mx-2 my-6">Create Post</button>
     </form>
 </article>
+
+<form class="comment-form">
+    <div>
+        <textarea name="comment-body"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">submit comment</button>
+    </div>
+</form>
+
+{{ comments post.comments }}
+
+<script src="public/js/comment.js"></script>
