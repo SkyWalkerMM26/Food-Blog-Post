@@ -3,17 +3,20 @@ const { Post } = require('../models');
 const postData = [
     {
         title: 'Damn Delicious',
-        text: 'This is res is offering amazing food',
+        content_box: 'This is res is offering amazing food',
+        image: 'https://via.placeholder.com/400',
         user_id: 1
     },
     {
         title: 'Wow, Yum',
-        text: 'The best breakfast in town',
+        content_box: 'The best breakfast in town',
+        image: 'https://via.placeholder.com/400',
         user_id: 2
     },
     {
         title: 'How to make a peanut butter bread',
-        text: 'Follow the ingredients and steps as below',
+        content_box: 'Follow the ingredients and steps as below',
+        image: 'https://via.placeholder.com/400',
         user_id: 3
     },
 ];
