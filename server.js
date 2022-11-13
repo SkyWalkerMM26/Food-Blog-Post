@@ -13,9 +13,15 @@ const exphbs = require('express-handlebars');
 //keeps track of user
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const helpers = require('./utils/helpers');
+
+const hbs = exphbs.create({ helpers });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 const sess = {
     secret: 'Super secret secret',
