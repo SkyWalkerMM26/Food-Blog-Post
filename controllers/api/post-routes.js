@@ -47,19 +47,33 @@ router.get('/:id', (req, res) => {
             //id which is from the values parsed from the URL path.
             id: req.params.id
         },
-        attributes: ['id','title', 'content_box', 'references','user_id', 'created_at'],
-        include: {
+        attributes: ['id','title', 'content_box', 'user_id', 'created_at'],
+        include: [
+            {
             model: User,
             attributes: ['username']
+        },
+        {
+            model: Comment,
+            attributes: ['id', 'content', 'post_id', 'user_id', 'created_at'],
+            include: {
+                model: User,
+                attributes: ['username']
+            }
         }
+      ]
     })
-    .then(dbPostData => {
+      .then(dbPostData => {
         if (!dbPostData) {
-            res.status(404).json({ message: ' No post found with this id'});
+          res.status(404).json({ message: 'No post found with this id' });
+          return;
         }
-    })
-
-    })
-})
+        res.json(dbPostData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
 
    
