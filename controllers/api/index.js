@@ -7,6 +7,6 @@ const imageRoutes = require("./image-upload");
 router.use("/posts", postRoutes);
 router.use("/comments", commentRoutes);
 router.use("/users", userRoutes);
-router.use("images", imageRoutes);
+router.use("/images", imageRoutes);
 
 module.exports = router;
