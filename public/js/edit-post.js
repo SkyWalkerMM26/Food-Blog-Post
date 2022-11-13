@@ -20,7 +20,7 @@ async function editFormHandler(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/newpost');
+        document.location.replace('/new-post');
     } else {
         alert(response.statusText);
     }

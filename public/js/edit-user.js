@@ -17,4 +17,20 @@ async function editFormHandler(event) {
 
     let userUpdate = '{' + [username,email, password].filter(value => value).join(',') + '}';
     userUpdate = JSON.parse(userUpdate)
+
+    const response = await fetch(`/api/users/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify(userUpdate),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    if (response.ok) {
+        document.location.replace('/new-post');
+    } else {
+        alert(response.statusText);
+    }
 }
+
+document.querySelector('.edit-user-form').addEventListener('submit', editFormHandler);
