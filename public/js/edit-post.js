@@ -18,4 +18,10 @@ async function editFormHandler(event) {
             'Content-Type': 'application/json'
         }
     });
+
+    if (response.ok) {
+        document.location.replace('/newpost');
+    } else {
+        alert(response.statusText);
+    }
 }
