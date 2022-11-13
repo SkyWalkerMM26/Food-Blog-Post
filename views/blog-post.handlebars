@@ -9,15 +9,16 @@
           </div>
         </div>
       </section>
-      {{#each comment as |comment|}}
       <section class="text-center">
         <div class="card col-md-6 p-3 m-3">
+          {{#each comment as |comment|}}
         <div class="card-body">
           {{content}}
         </div>
         <div class="card-header">
           <p class="font-weight-light">-{{username}}</p>
         </div>
+        {{/each}}
       </div>
         <p class="font-weight-light">Create a new comment:</p>
         <input class="card-header"></input>
