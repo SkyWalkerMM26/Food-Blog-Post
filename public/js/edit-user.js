@@ -12,4 +12,9 @@ async function editFormHandler(event) {
     } else {
         password = '"password": "' + password + '"';
     }
+
+    const id = document.querySelector('input[name="user-id"]').value;
+
+    let userUpdate = '{' + [username,email, password].filter(value => value).join(',') + '}';
+    userUpdate = JSON.parse(userUpdate)
 }
