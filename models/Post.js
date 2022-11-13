@@ -19,15 +19,15 @@ Post.init(
       },
     },
     content_box: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
-      },
-      references: {
-        model: "user",
-        key: "id",
-      },
+      }
+      // references: {
+      //   model: "user",
+      //   key: "id",
+      // },
     },
     image: {
       type: DataTypes.STRING,
