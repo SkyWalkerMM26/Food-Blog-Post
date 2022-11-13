@@ -3,7 +3,7 @@ const express = require('express');
 // require our controllers file that has the implementing codes.
 const routes = require('./controllers');
 //referring to protected mysql login info
-const sequelize = require('.config/connection');
+const sequelize = require('./config/connection');
 //The node:path module provides utilities for working with file and directory paths. It can be accessed using:
 const path = require('path');
 // protects env mysql login info.
