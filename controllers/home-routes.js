@@ -26,11 +26,7 @@ router.get('/', (req, res) => {
       const posts = dbPostData.map((post) => post.get({ plain: true }));
       res.render('homepage', {
         posts,
-<<<<<<< HEAD
-        loggedIn: req.session.loggedIn,
-=======
         logged_in: req.session.logged_in
->>>>>>> ee09234d0e9d8b1f67519ec99a2b2cc496eac3f2
       });
     })
     .catch((err) => {
@@ -76,37 +72,22 @@ router.get('/post/:id', (req, res) => {
         const post = dbPostData.get({ plain: true });
         res.render('single-post', {
             post,
-            logged_in: req.session.logged_in
+            loggedIn: req.session.loggedIn
           });
       })
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
       });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+  });
 
 router.get('/login', (req, res) => {
-<<<<<<< HEAD
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-=======
-    if (req.session.logged_in) {
+    if (req.session.loggedIn) {
       res.redirect('/');
       return;
     }
   
     res.render('login');
   });
->>>>>>> ee09234d0e9d8b1f67519ec99a2b2cc496eac3f2
-
-  res.render('login');
-});
 
 module.exports = router;
