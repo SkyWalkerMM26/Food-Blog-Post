@@ -14,7 +14,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
+      // If successful, redirect the browser to the home page
       document.location.replace("/");
     } else {
       alert(response.statusText);
@@ -25,9 +25,9 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector("#name-input").value.trim();
-  const email = document.querySelector("#email-input").value.trim();
-  const password = document.querySelector("#password-input").value.trim();
+  const name = document.querySelector("#new-name-input").value.trim();
+  const email = document.querySelector("#new-email-input").value.trim();
+  const password = document.querySelector("#new-password-input").value.trim();
 
   if (name && email && password) {
     const response = await fetch("/api/users", {
@@ -45,9 +45,9 @@ const signupFormHandler = async (event) => {
 };
 
 document
-  .querySelector(".login-form")
+  .querySelector("#login-form")
   .addEventListener("submit", loginFormHandler);
 
 document
-  .querySelector(".signup-form")
+  .querySelector("#signup-form")
   .addEventListener("submit", signupFormHandler);
