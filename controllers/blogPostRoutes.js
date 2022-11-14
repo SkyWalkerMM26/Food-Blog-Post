@@ -18,21 +18,22 @@ router.get('/', withAuth, (req, res) => {
           model: User,
           attributes: ['username'],
         },
-        {
-          model: User,
-          attributes: ['username']
-        }
-      ]
+      },
+      {
+        model: User,
+        attributes: ['username'],
+      },
+    ],
+  })
+    .then((dbPostData) => {
+      const posts = dbPostData.map((post) => post.get({ plain: true }));
+      res.render('blog-post', { posts, logged_in: true });
     })
-      .then(dbPostData => {
-        const posts = dbPostData.map(post => post.get({ plain: true }));
-        res.render('blog-post', { posts, logged_in: true });
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  });
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 // as a loggedIn user, edit post.
 router.get('/edit/:id', withAuth, (req, res) => {
@@ -84,7 +85,7 @@ router.get('/edituser', withAuth, (req, res) => {
         return;
       }
       const user = dbUserData.get({ plain: true });
-      res.render('edit-user', {user, loggedIn: true});
+      res.render('edit-user', { user, logged_in: true });
     })
     .catch((err) => {
       console.log(err);
