@@ -7,15 +7,21 @@
     <button class="btn btn-outline-white my-sm-0" type="submit">Search Posts</button>
   </form>
    <div class="row">
-    <div class="col-sm-8"><img src="https://via.placeholder.com/500"></div>
+    <div class="col-sm-8">
+      {{!-- <img src="https://via.placeholder.com/500"> --}}
+      </div>
     <div>
 
-      <div class="col-sm-4"><img src="https://via.placeholder.com/200"></div>
-      <div class="col-sm-4"><img src="https://via.placeholder.com/200"></div>
+      <div class="col-sm-4">
+        {{!-- <img src="https://via.placeholder.com/200"> --}}
+        </div>
+      <div class="col-sm-4">
+        {{!-- <img src="https://via.placeholder.com/200"> --}}
+      </div>
     </div>
   </div>
 <div class="row">
-    {{#each post as |post|}}
-    <div class="col-sm"><img src="{{imgage}}"></div>
+    {{#each posts as |post|}}
+    <div class="col-sm"><a href="/post/{{post.id}}"><img src="{{post.image}}"></a></div>
     {{/each}}
   </div>

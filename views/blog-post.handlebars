@@ -1,32 +1,32 @@
  <section>
         <div>
           <div class="container">
-            <h2 class="display-4 text-center text-secondary">{{title}}</h2>
+            <h2 class="display-4 text-center text-secondary">{{post.title}}</h2>
             <img src="https://via.placeholder.com/400" class="img-fluid rounded mx-auto d-block head-img">
-              <p class="col-8 text-center lead">{{content_box}}</p>
-            <p class="font-weight-light text-right">Author: {{username}}</p>
+              <p class="col-8 text-center lead">{{post.content_box}}</p>
+            <p class="font-weight-light text-right">Author: {{post.user.username}}</p>
             <p class="font-weight-light text-right">Date Created:</p>
           </div>
         </div>
       </section>
       <section class="text-center">
         <div class="card col-md-6 p-3 m-3">
-          {{#each comment as |comment|}}
+          {{#each post.comments as |comment|}}
         <div class="card-body">
-          {{content}}
+          {{comment.content}}
         </div>
         <div class="card-header">
-          <p class="font-weight-light">-{{username}}</p>
+          <p class="font-weight-light">-{{comment.user.username}}</p>
         </div>
         {{/each}}
       </div>
         <p class="font-weight-light">Create a new comment:</p>
-        <input class="card-header"></input>
+        <input id="commentBox" class="card-header"></input>
         <div class="card-body">
         </div>
-        <button class="btn btn-sm my-2 col-3 float-right" type="submit">submit comment</button>
+        <button id="submitComment" class="btn btn-sm my-2 col-3 float-right" type="submit">submit comment</button>
       </div>
     </section>
 
- <script src="public/js/add-comment.js"></script>
+ <script src="/js/add-comment.js"></script>
     

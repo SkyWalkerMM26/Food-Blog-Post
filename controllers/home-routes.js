@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
             'content_box',
             'title',
             'created_at',
+            'image'
           ],
         order: [[ 'created_at', 'DESC']],
         include: [
@@ -29,8 +30,9 @@ router.get('/', (req, res) => {
     })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
+      console.log(posts) // see if you have all of your data
       res.render('homepage', {
-        posts,
+        posts: posts,
         logged_in: req.session.logged_in
       });
     })
@@ -73,8 +75,9 @@ router.get('/post/:id', (req, res) => {
           return;
         }
         const post = dbPostData.get({ plain: true });
-        res.render('single-post', {
-            post,
+        console.log(post);
+        res.render('blog-post', {
+            post: post,
             logged_in: req.session.logged_in
           });
       })
