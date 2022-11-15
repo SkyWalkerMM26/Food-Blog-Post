@@ -1,55 +1,55 @@
-        <section class ="row justify-content-center my-4">
-        <div class="col-10 col-sm-8 col-md-6">
-          <h2 class="text-center text-secondary">Login</h2>
-          <div class="row justify-content-center">
-            <div class="col-sm mb-3 p-4 bg-white">
-              <form>
-                <div class="form-group">
-                  <label for="email-input">Email address</label>
-                  <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp">
-                    {{email}}
-                  </input>
-                </div>
-                <div class="form-group">
-                  <label for="password-input">Password</label>
-                  <input type="password" class="form-control" id="password-input">
-                    {{password}}
-                  </input>
-                </div>
-                <button type="submit" class="btn" id="login-form">Submit</button>
-              </form>
-            </div>
+<section class="row justify-content-center my-4">
+  <div class="col-10 col-sm-8 col-md-6">
+    <h2 class="text-center text-secondary">Login</h2>
+    <div class="row justify-content-center">
+      <div class="col-sm mb-3 p-4 bg-white">
+        <form>
+          <div class="form-group">
+            <label for="email-input">Email address</label>
+            <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp">
+            {{email}}
+            </input>
           </div>
-        </div>
-        <div class="col-10 col-sm-8 col-md-6">
-          <h2 class="text-center text-secondary">Sign Up</h2>
-          <div class="row justify-content-center">
-            <div class="col-sm mb-3 p-4 bg-white">
-              <form>
-                <div class="form-group">
-                  <label for="name-input">Name</label>
-                  <input type="name" class="form-control" id="new-name-input">
-                    {{!-- {{new-username-input}} --}}
-                  </input>
-                  <small class="form-text text-muted">This name will be displayed on  posts and comments.</small>
-                </div>
-                <div class="form-group">
-                  <label for="email-input">Email address</label>
-                  <input type="email" class="form-control" id="new-email-input" aria-describedby="emailHelp">
-                    {{!-- {{new-email-input}} --}}
-                  </input>
-                </div>
-                <div class="form-group">
-                  <label for="password-input">Password</label>
-                  <input type="password" class="form-control" id="new-password-input">
-                    {{!-- {{new-password-input}} --}}
-                  </input>
-                </div>
-                <button type="submit" class="btn" id="signup-form">Submit</button>
-              </form>
-            </div>
+          <div class="form-group">
+            <label for="password-input">Password</label>
+            <input type="password" class="form-control" id="password-input">
+            {{password}}
+            </input>
           </div>
-        </div>
-        </section>
+          <button type="submit" class="btn" id="login-form">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-10 col-sm-8 col-md-6">
+    <h2 class="text-center text-secondary">Sign Up</h2>
+    <div class="row justify-content-center">
+      <div class="col-sm mb-3 p-4 bg-white">
+        <form>
+          <div class="form-group">
+            <label for="name-input">Name</label>
+            <input type="name" class="form-control" id="new-name-input">
+            {{!-- {{new-username-input}} --}}
+            </input>
+            <small class="form-text text-muted">This name will be displayed on posts and comments.</small>
+          </div>
+          <div class="form-group">
+            <label for="email-input">Email address</label>
+            <input type="email" class="form-control" id="new-email-input" aria-describedby="emailHelp">
+            {{!-- {{new-email-input}} --}}
+            </input>
+          </div>
+          <div class="form-group">
+            <label for="password-input">Password</label>
+            <input type="password" class="form-control" id="new-password-input">
+            {{!-- {{new-password-input}} --}}
+            </input>
+          </div>
+          <button type="submit" class="btn" id="signup-form">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <script src="/js/login.js"></script>
+<script src="/js/login.js"></script>

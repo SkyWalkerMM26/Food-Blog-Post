@@ -1,62 +1,63 @@
-      <section class="row justify-content-center my-4">
-        <div class="col-10 col-sm-8 col-md-6">
-            <h2 class="text-center text-secondary">Create a New Post</h2>
-            <form clas="new-post-form">
-              <div class="form-group mb-2 p-2">
-                <label for="name-input">Post Title:</label>
-                <input type="text" class="form-control" id="name-input" placeholder="Give this post a fun title!">
-                  {{title-input}}
-                </input>
-              </div>
-               <div class="form-group mb-2 p-2">
-                <div class="dropdown">Food Category:
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Select a food category
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">African</a>
-                    <a class="dropdown-item" href="#">American</a>
-                    <a class="dropdown-item" href="#">Cajun</a>
-                    <a class="dropdown-item" href="#">Carribean</a>
-                    <a class="dropdown-item" href="#">Central American</a>
-                    <a class="dropdown-item" href="#">French</a>
-                    <a class="dropdown-item" href="#">German</a>
-                    <a class="dropdown-item" href="#">Greek</a>
-                    <a class="dropdown-item" href="#">Indian</a>
-                    <a class="dropdown-item" href="#">Italian</a>
-                    <a class="dropdown-item" href="#">Japanese</a>
-                    <a class="dropdown-item" href="#">Korean</a>
-                    <a class="dropdown-item" href="#">Mediterranean</a>
-                    <a class="dropdown-item" href="#">Mexican</a>
-                    <a class="dropdown-item" href="#">Spanish</a>
-                    <a class="dropdown-item" href="#">Thai</a>
-                    <a class="dropdown-item" href="#">Vietnamese</a>
-                    <a class="dropdown-item" href="#">Dessert</a>
-                    <a class="dropdown-item" href="#">Other</a>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group mb-2 p-2">
-                <label for="comment-input">Your Post Content:</label>
-                <textarea name="comment" id="comment-input" class="form-control">
+<section class="row justify-content-center my-4">
+  <div class="col-10 col-sm-8 col-md-6">
+    <h2 class="text-center text-secondary">Create a New Post</h2>
+    <form clas="new-post-form">
+      <div class="form-group mb-2 p-2">
+        <label for="name-input">Post Title:</label>
+        <input type="text" class="form-control" id="name-input" placeholder="Give this post a fun title!">
+        {{title-input}}
+        </input>
+      </div>
+      <div class="form-group mb-2 p-2">
+        <div class="dropdown">Food Category:
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Select a food category
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">African</a>
+            <a class="dropdown-item" href="#">American</a>
+            <a class="dropdown-item" href="#">Cajun</a>
+            <a class="dropdown-item" href="#">Carribean</a>
+            <a class="dropdown-item" href="#">Central American</a>
+            <a class="dropdown-item" href="#">French</a>
+            <a class="dropdown-item" href="#">German</a>
+            <a class="dropdown-item" href="#">Greek</a>
+            <a class="dropdown-item" href="#">Indian</a>
+            <a class="dropdown-item" href="#">Italian</a>
+            <a class="dropdown-item" href="#">Japanese</a>
+            <a class="dropdown-item" href="#">Korean</a>
+            <a class="dropdown-item" href="#">Mediterranean</a>
+            <a class="dropdown-item" href="#">Mexican</a>
+            <a class="dropdown-item" href="#">Spanish</a>
+            <a class="dropdown-item" href="#">Thai</a>
+            <a class="dropdown-item" href="#">Vietnamese</a>
+            <a class="dropdown-item" href="#">Dessert</a>
+            <a class="dropdown-item" href="#">Other</a>
+          </div>
+        </div>
+      </div>
+      <div class="form-group mb-2 p-2">
+        <label for="comment-input">Your Post Content:</label>
+        <textarea name="comment" id="comment-input" class="form-control">
                   {{content_box}}
                 </textarea>
-              </div>
-              
-            </form>
-          </div>
-        <div class="col-10 col-sm-8 col-md-6 mx-8 p-4 mb-6">
-          <div>
-            <h2 class="text-center text-secondary">Image Upload</h2>
-            <div class="custom-file">
-              <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-              <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-              <div class="invalid-feedback">Example invalid custom file feedback</div>
-            </div>
-            <button class="btn m-4 p-4">Create Post</button>
-          </div>
-          
-        </div>
-      </section>
+      </div>
 
-      <script src="/js/Post.js"></script>
+    </form>
+  </div>
+  <div class="col-10 col-sm-8 col-md-6 mx-8 p-4 mb-6">
+    <div>
+      <h2 class="text-center text-secondary">Image Upload</h2>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+        <div class="invalid-feedback">Example invalid custom file feedback</div>
+      </div>
+      <button class="btn m-4 p-4">Create Post</button>
+    </div>
+
+  </div>
+</section>
+
+<script src="/js/Post.js"></script>
