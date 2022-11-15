@@ -18,8 +18,12 @@ Post.init(
         len: [1],
       },
     },
-    content_box: {
+    category: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    content_box: {
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         len: [1],

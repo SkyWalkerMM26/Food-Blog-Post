@@ -5,11 +5,63 @@ const withAuth = require('../utils/auth');
 
 // as a logged_in user, find all post.
 router.get('/', withAuth, (req, res) => {
+<<<<<<< HEAD
   Post.findAll({
+=======
+    Post.findAll({
+      where: {
+        user_id: req.session.user_id
+      },
+      attributes: [
+        'id',
+        'content_box',
+        'title',
+        'category',
+        'created_at',
+      ],
+      include: [
+        {
+          model: Comment,
+          attributes: ['id', 'content', 'post_id', 'user_id', 'created_at'],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        },
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
+    })
+      .then(dbPostData => {
+        const posts = dbPostData.map(post => post.get({ plain: true }));
+        res.render('blog-post', { posts, logged_in: true });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+  // as a loggedIn user, edit post.
+router.get('/edit/:id', withAuth, (req, res) => {
+    Post.findOne({
+>>>>>>> d140752638257ed76b314b9a4b76eba5dfa637be
     where: {
       user_id: req.session.user_id,
     },
+<<<<<<< HEAD
     attributes: ['id', 'content_box', 'title', 'created_at'],
+=======
+    attributes: [
+      'id',
+      'content_box',
+      'title',
+      'category',
+      'created_at',
+    ],
+>>>>>>> d140752638257ed76b314b9a4b76eba5dfa637be
     include: [
       {
         model: Comment,
@@ -93,6 +145,12 @@ router.get('/edituser', withAuth, (req, res) => {
     });
 });
 
+<<<<<<< HEAD
 //render a page that results the blog-post handlebar populating with info from spec post id
+=======
+  
+
+  
+>>>>>>> d140752638257ed76b314b9a4b76eba5dfa637be
 
 module.exports = router;
