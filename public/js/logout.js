@@ -6,11 +6,7 @@ const logout = async () => {
   });
 
   if (response.ok) {
-<<<<<<< HEAD
-    document.location.replace('/');
-=======
-    document.location.replace("/login");
->>>>>>> d140752638257ed76b314b9a4b76eba5dfa637be
+    document.location.replace('/login');
   } else {
     alert(response.statusText);
   }

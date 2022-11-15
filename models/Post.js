@@ -28,10 +28,6 @@ Post.init(
       validate: {
         len: [1],
       },
-      // references: {
-      //   model: "user",
-      //   key: "id",
-      // },
     },
     image: {
       type: DataTypes.STRING,
@@ -39,6 +35,11 @@ Post.init(
       validate: {
         isUrl: true,
       },
+    },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     user_id: {
       type: DataTypes.INTEGER,
