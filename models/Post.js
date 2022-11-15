@@ -18,6 +18,10 @@ Post.init(
         len: [1],
       },
     },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     content_box: {
       type: DataTypes.STRING,
       allowNull: false,
