@@ -8,11 +8,33 @@
                   {{title-input}}
                 </input>
               </div>
-              <div class="form-group mb-2 p-2">
-                <label for="category-input">Food Category:</label>
-                <input type="text" class="form-control" id="category-input" placeholder="What type of food are you posting about?">
-                  {{category-input}}
-                </input>
+               <div class="form-group mb-2 p-2">
+                <div class="dropdown">Food Category:
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a food category
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">African</a>
+                    <a class="dropdown-item" href="#">American</a>
+                    <a class="dropdown-item" href="#">Cajun</a>
+                    <a class="dropdown-item" href="#">Carribean</a>
+                    <a class="dropdown-item" href="#">Central American</a>
+                    <a class="dropdown-item" href="#">French</a>
+                    <a class="dropdown-item" href="#">German</a>
+                    <a class="dropdown-item" href="#">Greek</a>
+                    <a class="dropdown-item" href="#">Indian</a>
+                    <a class="dropdown-item" href="#">Italian</a>
+                    <a class="dropdown-item" href="#">Japanese</a>
+                    <a class="dropdown-item" href="#">Korean</a>
+                    <a class="dropdown-item" href="#">Mediterranean</a>
+                    <a class="dropdown-item" href="#">Mexican</a>
+                    <a class="dropdown-item" href="#">Spanish</a>
+                    <a class="dropdown-item" href="#">Thai</a>
+                    <a class="dropdown-item" href="#">Vietnamese</a>
+                    <a class="dropdown-item" href="#">Dessert</a>
+                    <a class="dropdown-item" href="#">Other</a>
+                  </div>
+                </div>
               </div>
               <div class="form-group mb-2 p-2">
                 <label for="comment-input">Your Post Content:</label>
