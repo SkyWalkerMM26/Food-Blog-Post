@@ -1,10 +1,14 @@
 async function postFormHandler(event) {
-  console.log('sneding data')
+  console.log('sending data')
   event.preventDefault();
 
   // grabe the comment
   const comment = document.querySelector('#commentBox').value;
   // grabe the postId
+  // const post_id = document.querySelector('#postId').value;
+  const post_id = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
+];
 
   // this grabs a post content which we dont have/need
   // const post_content = document
@@ -13,12 +17,12 @@ async function postFormHandler(event) {
 
   // creat an obj w/ that data using the correct prop name
 
-  const response = await fetch("/api/comment", {
+  const response = await fetch("/api/comments", {
     method: "POST",
     // send the obj in the body
     body: JSON.stringify({
-      title: comment,
-      post_content,
+      comment,
+      post_id,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -26,7 +30,7 @@ async function postFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace("/dashboard");
+    document.location.replace("/");
   } else {
     alert(response.statusText);
   }
