@@ -23,7 +23,7 @@ Post.init(
       allowNull: false,
     },
     content_box: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         len: [1],
