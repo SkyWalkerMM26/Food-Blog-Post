@@ -57,10 +57,6 @@ router.post('/logout', (req, res) => {
   }
 });
 
-<<<<<<< HEAD
-module.exports = router;
-=======
 //sign up route
 
 module.exports = router;
->>>>>>> d140752638257ed76b314b9a4b76eba5dfa637be
