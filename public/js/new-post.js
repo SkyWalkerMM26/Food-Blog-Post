@@ -3,7 +3,7 @@ async function newPostHandler(event) {
     const title = document.querySelector('input[name="name-input"]').value;
     const text = document.querySelector('input[name="comment-input"]').value;
 
-    const response = await fetch('/api/post-routes', {
+    const response = await fetch('/api/new-post', {
         method: 'POST',
         body: JSON.stringify({
             title,
