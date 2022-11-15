@@ -1,3 +1,4 @@
+//function not working: needs to end the session and redirect page
 const logout = async () => {
   const response = await fetch("/api/users/logout", {
     method: "POST",
@@ -5,7 +6,7 @@ const logout = async () => {
   });
 
   if (response.ok) {
-    document.location.replace("/");
+    document.location.replace("/login");
   } else {
     alert(response.statusText);
   }

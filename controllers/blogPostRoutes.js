@@ -14,6 +14,7 @@ router.get('/', withAuth, (req, res) => {
         'id',
         'content_box',
         'title',
+        'category',
         'created_at',
       ],
       include: [
@@ -51,6 +52,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
       'id',
       'content_box',
       'title',
+      'category',
       'created_at',
     ],
     include: [
@@ -105,6 +107,6 @@ router.get('/edituser', withAuth, (req, res) => {
     })
   });
 
-  //render a page that results the blog-post handlebar populating with info from spec post id
+  //render a page that results the blog-post.handlebar populating with info from specific post id
 
 module.exports = router;
