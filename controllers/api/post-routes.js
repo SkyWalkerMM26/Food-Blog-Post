@@ -24,7 +24,7 @@ router.get('/', (req,res) => {
             },
             {
                 model: Comment,
-                attributes: ['id', 'content', 'user_id','post_id', 'created_at'],
+                attributes: ['id', 'content', 'user_id','post_id' ],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
             //id which is from the values parsed from the URL path.
             id: req.params.id
         },
-        attributes: ['id','title', 'content_box', 'user_id', 'created_at'],
+        attributes: ['id','title', 'content_box', 'user_id' ],
         include: [
             {
             model: User,
@@ -55,7 +55,7 @@ router.get('/:id', (req, res) => {
         },
         {
             model: Comment,
-            attributes: ['id', 'content', 'post_id', 'user_id', 'created_at'],
+            attributes: ['id', 'content', 'post_id', 'user_id' ],
             include: {
                 model: User,
                 attributes: ['username']

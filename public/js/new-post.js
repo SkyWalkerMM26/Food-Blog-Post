@@ -1,14 +1,11 @@
-async function newPostHandler(event) {
-    event.preventDefault();
-    const title = document.querySelector('input[name="name-input"]').value;
-    const text = document.querySelector('input[name="comment-input"]').value;
-
-    const response = await fetch('/api/post-routes', {
+// async function newPostHandler(event) {
+//     event.preventDefault();
+//     const title = document.querySelector('input[name="name-input"]').value;
+//     const text = document.querySelector('input[name="comment-input"]').value;
+const newPost = async () => {
+    const response = await fetch('/api/post', {
         method: 'POST',
-        body: JSON.stringify({
-            title,
-            text
-        }),
+        body: JSON.stringify({ title, category, content_box, image }),
         headers: {
             'Content-Type': 'application/json'
         }
@@ -21,4 +18,4 @@ async function newPostHandler(event) {
     }
 }
 
-document.querySelector('#new-post').addEventListener('click', newPostHandler);
+document.querySelector("#newPost").addEventListener("click", newPost);
