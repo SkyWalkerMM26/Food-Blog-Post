@@ -16,8 +16,14 @@ header{
 
 #start{
     position: relative;
-    bottom: 8vh;
+    bottom: 9vh;
     /* top: 2vh; */
     color: white;
     border: none;
 }
+
+a {
+    color: white;
+}
+
+/* sticky footer styling */
