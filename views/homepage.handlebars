@@ -1,27 +1,17 @@
  <header>
     <img src="./img/ex-header.png" class="img-fluid rounded mx-auto d-block head-img" alt="Responsive image">
+    {{#if logged_in}}
+    <button type="button" class="btn btn-secondary btn-lg mx-auto d-block" id="start">New Post</button>
+    {{else}}
     <button type="button" class="btn btn-secondary btn-lg mx-auto d-block" id="start">Login</button>
+    {{/if}}
   </header>
   <form class="float-right col-xl-3">
     <input class="form-control mr-sm-2" type="search" placeholder="Insert a category">
     <button class="btn btn-outline-white my-sm-0" type="submit">Search Posts</button>
   </form>
-   <div class="row">
-    <div class="col-sm-8">
-      {{!-- <img src="https://via.placeholder.com/500"> --}}
-      </div>
-    <div>
-
-      <div class="col-sm-4">
-        {{!-- <img src="https://via.placeholder.com/200"> --}}
-        </div>
-      <div class="col-sm-4">
-        {{!-- <img src="https://via.placeholder.com/200"> --}}
-      </div>
-    </div>
-  </div>
 <div class="row">
     {{#each posts as |post|}}
-    <div class="col-sm"><a href="/post/{{post.id}}"><img src="{{post.image}}"></a></div>
+    <div class="col-sm"><a href="/post/{{post.id}}"><img src="{{post.image}}" width="400" height="400"></a></div>
     {{/each}}
   </div>

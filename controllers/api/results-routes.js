@@ -1,0 +1,1 @@
+//GET route for all posts selected from a specific category (column in post table)
