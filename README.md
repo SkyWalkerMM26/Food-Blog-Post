@@ -41,6 +41,7 @@ But first, let me take a food selfie! Camera Eats First is a social media platfo
 - Bcrypt
 - Handlebars
 - Cloudinary
+- Heroku
 
 
 <br>
