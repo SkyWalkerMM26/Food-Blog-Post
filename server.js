@@ -24,13 +24,13 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 const sess = {
-    secret: 'Super secret secret',
-    cookie: {},
-    resave: false,
-    saveUnitialized: false,
-    store: new SequelizeStore({
-        db: sequelize
-    })
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUnitialized: false,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
@@ -43,12 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-
 //synchronize your Sequelize model with your database tables.
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
-
-
-
-
